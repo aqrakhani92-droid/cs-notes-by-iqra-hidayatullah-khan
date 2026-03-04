@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Class 11 - Unit 7 Notes</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Unit-7: Database Fundamentals</h1>
+    <p><em>Complete Exercise Solutions for Chapter 7</em></p>
+
+    <hr>
+
+    <h2>Q1. Select the best choice for the following MCQs.</h2>
+    <ol>
+        <li>Hierarchical DBMS organizes data elements into ________ structure.
+            <br> <strong>(a) Tree [Correct]</strong> (b) Data compartments (c) Data units (d) Objects
+        </li>
+        <br>
+        <li>________ is a database model in which information is represented in the form of objects.
+            <br> (a) Network Database Model (b) Relational Database Model <strong>(c) Object-Oriented Database Model [Correct]</strong> (d) Hierarchal Database Model
+        </li>
+        <br>
+        <li>The person who has central control over data and programs in a database system.
+            <br> <strong>(a) DBA [Correct]</strong> (b) Designer (c) System Analyst (d) Programmer
+        </li>
+        <br>
+        <li>In relational terminology, an attribute is also called ________.
+            <br> (a) a record (b) an entity <strong>(c) a field [Correct]</strong> (d) a table
+        </li>
+        <br>
+        <li>A row in a table is also known as ________.
+            <br> (a) Column (b) Relation <strong>(c) Tuple [Correct]</strong> (d) Field
+        </li>
+        <br>
+        <li>________ is a set of rules or specifications which state how data can be stored, organized and manipulated.
+            <br> <strong>(a) Database model [Correct]</strong> (b) Database design (c) Database architecture (d) Database structure
+        </li>
+        <br>
+        <li>Which database model uses a collection of tables to represent both data and the relationship among those data?
+            <br> (a) Network Database Model <strong>(b) Relational Database Model [Correct]</strong> (c) Object-Oriented Database Model (d) Hierarchal Database Model
+        </li>
+        <br>
+        <li>________ is a database language that defines the structure in which data are stored.
+            <br> (a) DNL (b) DCL <strong>(c) DDL [Correct]</strong> (d) DML
+        </li>
+        <br>
+        <li>A field, or a combination of fields used to identify a particular row in a relation is called ________.
+            <br> (a) Secondary key (b) Foreign key <strong>(c) Primary key [Correct]</strong> (d) Alternate key
+        </li>
+        <br>
+        <li>A combination of two or more columns used to identify a particular row in a relation is a ________.
+            <br> (a) Secondary key <strong>(b) Composite key [Correct]</strong> (c) Foreign key (d) Primary key
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>Q2. Give short answers to the following questions.</h2>
+
+    <p><strong>i. Define the terms database and DBMS.</strong><br>
+    A database is an organized collection of related data stored in a way that it can be easily accessed, managed, and updated. It represents real-world entities like students or employees. A Database Management System (DBMS) is the software used to create and manage these databases. It provides an interface for users to perform tasks like adding, deleting, or retrieving data efficiently.</p>
+
+    <p><strong>ii. Give three examples of data and information.</strong><br>
+    Data is raw facts, while information is processed data. 1) Raw marks of a student (Data) converted into a Grade (Information). 2) Daily sales figures (Data) compiled into a Monthly Profit Report (Information). 3) A list of temperatures (Data) used to calculate the Average Weather for a week (Information). Thus, data serves as input and information is the useful output.</p>
+
+    <p><strong>iii. Write three disadvantages of file management system.</strong><br>
+    1) Data Redundancy: The same data is often duplicated in different files, wasting storage space. 2) Data Inconsistency: Updating data in one file might not update it in another, leading to conflicting records. 3) Lack of Security: It is difficult to restrict access to specific parts of the data, making it vulnerable to unauthorized changes or data theft.</p>
+
+    <p><strong>iv. Give any four advantages of database system.</strong><br>
+    1) Data Integration: All data is stored in one central location for easy access. 2) Reduced Redundancy: DBMS ensures that data is not repeated unnecessarily. 3) Data Integrity: It enforces rules to ensure data accuracy and consistency. 4) Better Security: Access can be restricted to authorized users through passwords and permission levels.</p>
+
+    <p><strong>v. Differentiate between DDL and DML.</strong><br>
+    Data Definition Language (DDL) is used to define the structure or schema of the database, such as creating or deleting tables. Examples include CREATE and DROP. Data Manipulation Language (DML) is used to manage the actual data within those structures. Examples include SELECT, INSERT, and UPDATE. While DDL deals with the "container," DML deals with the "content" inside it.</p>
+
+    <p><strong>vi. What is data model?</strong><br>
+    A data model is a collection of conceptual tools or rules used to describe how data is represented, organized, and stored in a database. it defines the relationships between data elements and sets constraints on how data can be manipulated. Common examples include the Relational Model, Hierarchical Model, and Network Model, each providing a different logical view of the database.</p>
+
+    <p><strong>vii. Differentiate between cardinality and modality.</strong><br>
+    Cardinality refers to the maximum number of times an instance in one entity can be associated with instances in another entity (e.g., One-to-One, One-to-Many). Modality (or participation) refers to the minimum number of times an instance must participate in a relationship, often indicated as being either Optional (0) or Mandatory (1).</p>
+
+    <p><strong>viii. What is primary key and foreign key?</strong><br>
+    A Primary Key is a unique field that identifies each record in a table and cannot contain null values. For example, "Student_ID." A Foreign Key is a field in one table that refers to the Primary Key in another table. It is used to establish a link or relationship between the two tables, ensuring referential integrity across the database system.</p>
+
+    <p><strong>ix. What is Relation? What is the role of DBA?</strong><br>
+    In database terms, a Relation is another name for a Table, consisting of rows (tuples) and columns (attributes). The Database Administrator (DBA) is a person responsible for the overall management of the database. Their role includes installing software, ensuring data security, managing user access, performing backups, and optimizing the database performance for the organization.</p>
+
+      <p><strong>ix. What is the role of DBA?</strong><br>
+    The Database Administrator (DBA) is a technical professional responsible for the overall management and smooth functioning of a database system. Their key roles include:
+    <ul>
+        <li><strong>Installation:</strong> Setting up the DBMS software and hardware.</li>
+        <li><strong>Security:</strong> Protecting data from unauthorized access by managing user accounts and passwords.</li>
+        <li><strong>Backup & Recovery:</strong> Creating regular backups and restoring data if the system fails.</li>
+        <li><strong>Performance Tuning:</strong> Optimizing the database speed so users can retrieve data quickly.</li>
+        <li><strong>Integrity:</strong> Ensuring that the data entered is accurate and follows the database rules.</li>
+    </ul>
+    </p>
+
+    <hr>
+
+    <h2>Q3. Give detailed answers to the following questions.</h2>
+
+    <p><strong>i. Explain different types of database models.</strong><br>
+    Database models define the logical structure of a database. The three main types are:<br>
+    1. <strong>Hierarchical Model:</strong> Data is organized into a tree-like structure. Each child record has only one parent, but a parent can have multiple children. It is simple but rigid.<br>
+    2. <strong>Network Model:</strong> Similar to the hierarchical model, but a child record can have multiple parents. This forms a graph-like structure and is more flexible for complex relationships.<br>
+    3. <strong>Relational Model:</strong> The most common model where data is stored in tables (relations). Tables are linked through common fields. It is highly flexible and easy to use with SQL.<br>
+    4. <strong>Object-Oriented Model:</strong> Represents information in the form of objects as used in object-oriented programming. It is ideal for complex data types like audio and video.</p>
+    
+
+    <p><strong>ii. What is SQL? Explain its types.</strong><br>
+    Structured Query Language (SQL) is the standard language for interacting with relational databases. It allows users to create, search, update, and delete data. It is divided into three main categories:<br>
+    1. <strong>DDL (Data Definition Language):</strong> Used to define the database structure. Commands include CREATE (to make tables), ALTER (to modify), and DROP (to delete).<br>
+    2. <strong>DML (Data Manipulation Language):</strong> Used to handle the data itself. Commands include INSERT (to add rows), SELECT (to retrieve data), UPDATE (to change data), and DELETE (to remove rows).<br>
+    3. <strong>DCL (Data Control Language):</strong> Used to control access and permissions. Commands include GRANT (to give access) and REVOKE (to take access away). SQL provides a unified way to manage complex data systems.</p>
+
+    <p><strong>iii. Explain various steps of planning a database.</strong><br>
+    Planning a database is a systematic process to ensure data accuracy. The steps include:<br>
+    1. <strong>Requirement Analysis:</strong> Identifying what data needs to be stored and how users will interact with it.<br>
+    2. <strong>Conceptual Design:</strong> Creating a high-level plan, often using Entity-Relationship Diagrams (ERD), to show entities and their links.<br>
+    3. <strong>Logical Design:</strong> Converting the ERD into a set of tables and applying rules to ensure data is organized efficiently.<br>
+    4. <strong>Physical Design:</strong> Deciding how the data will be stored on physical disks and choosing the right DBMS software.<br>
+    5. <strong>Implementation:</strong> Writing the SQL code to create the tables and loading the initial data. Proper planning prevents future errors and ensures scalability.</p>
+
+    <p><strong>iv. What is a relation? Explain the degree of relationships with examples.</strong><br>
+    A relation is a two-dimensional table used to store data in a relational database. Relationships define how these tables connect to each other. The degree refers to the number of entities involved:<br>
+    1. <strong>Unary Relationship:</strong> A relationship between instances of a single entity (e.g., an Employee manages another Employee).<br>
+    2. <strong>Binary Relationship:</strong> The most common type, involving two entities (e.g., a Student enrolls in a Course).<br>
+    3. <strong>Ternary Relationship:</strong> Involves three entities simultaneously (e.g., a Doctor prescribes a Medicine to a Patient).<br>
+    Understanding these degrees is crucial for building accurate Entity-Relationship Diagrams and database structures.</p>
+
+    <p><strong>v. What is ERD? Draw an ERD for the following systems.</strong><br>
+    An Entity-Relationship Diagram (ERD) is a visual representation of the entities within a system and the relationships between them. It uses symbols like Rectangles (Entities), Ovals (Attributes), and Diamonds (Relationships).<br>
+    (a) <strong>Hospital Management System:</strong> Entities include Patient, Doctor, and Ward. A Doctor "treats" a Patient; a Patient "occupies" a Ward.<br>
+    (b) <strong>Airline Booking System:</strong> Entities include Passenger, Flight, and Ticket. A Passenger "books" a Ticket; a Flight "carries" Passengers. These diagrams help developers understand the logic of the database before writing code.</p>
+  
+    
+    <br><br>
+    <strong>(a) Hospital Management System:</strong><br>
+    In this system, the main entities are <strong>Doctor</strong>, <strong>Patient</strong>, and <strong>Ward</strong>. 
+    <ul>
+        <li>A <strong>Doctor</strong> treats a <strong>Patient</strong> (One-to-Many: One doctor can treat many patients).</li>
+        <li>A <strong>Patient</strong> is admitted to a <strong>Ward</strong> (Many-to-One: Many patients can stay in one ward).</li>
+        <li>Attributes for Doctor include <em>Doctor_ID, Name, Specialization</em>.</li>
+        <li>Attributes for Patient include <em>Patient_ID, Name, Disease</em>.</li>
+    </ul>
+    
+    <br><br>
+    <strong>(b) Airline Booking System:</strong><br>
+    In this system, the main entities are <strong>Passenger</strong>, <strong>Flight</strong>, and <strong>Ticket</strong>.
+    <ul>
+        <li>A <strong>Passenger</strong> buys a <strong>Ticket</strong> (One-to-Many: One passenger can have multiple tickets for different journeys).</li>
+        <li>A <strong>Ticket</strong> is issued for a specific <strong>Flight</strong> (Many-to-One: Many tickets belong to one flight).</li>
+        <li>Attributes for Passenger include <em>Passport_No, Name, Contact</em>.</li>
+        <li>Attributes for Flight include <em>Flight_No, Destination, Departure_Time</em>.</li>
+    </ul>
+    
+    </p>
+
+    <p><strong>vi. Describe different steps of Transformation of E-R Model into Relational Schema.</strong><br>
+    Transforming an ERD into a Relational Schema involves several steps:<br>
+    1. <strong>Represent Entities as Tables:</strong> Each entity becomes a separate table.<br>
+    2. <strong>Represent Attributes:</strong> Each attribute of the entity becomes a column in the table.<br>
+    3. <strong>Identify Primary Keys:</strong> Choose a unique identifier for each table.<br>
+    4. <strong>Handle Relationships:</strong> For One-to-Many, add the primary key of the "One" side as a foreign key in the "Many" side. For Many-to-Many, create a new "Link" table containing the primary keys of both participating entities. This ensures that the logical diagram is correctly implemented into actual database tables.</p>
+
+    <p><strong>vii. What is Normalization? Explain 1NF, 2NF, 3NF.</strong><br>
+    Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves dividing large tables into smaller ones.<br>
+    1. <strong>First Normal Form (1NF):</strong> A table is in 1NF if every cell contains only a single (atomic) value and there are no repeating groups.<br>
+    2. <strong>Second Normal Form (2NF):</strong> The table must be in 1NF, and all non-key attributes must be fully dependent on the primary key (no partial dependency).<br>
+    3. <strong>Third Normal Form (3NF):</strong> The table must be in 2NF, and there should be no transitive dependency, meaning non-key attributes should not depend on other non-key attributes. Normalization ensures the database is efficient and free of update anomalies.</p>
+    
+
+</body>
+</html>
+
+
+<hr>
+    <div style="text-align: center; margin: 40px 0; display: flex; justify-content: center; gap: 15px;">
+        
+        <button onclick="goBack()" style="background-color: #808080; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            &laquo; Previous Chapter
+        </button>
+
+        <button onclick="goHome()" style="background-color: #000000; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            Home Page
+        </button>
+
+        <button onclick="goNext()" style="background-color: #0047ab; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            Next Chapter &raquo;
+        </button>
+
+    </div>
+
+    <script>
+        // Change these numbers for each page
+        // For example, if you are on Unit 7:
+        const currentUnit = 7; 
+
+        function goBack() {
+            if (currentUnit > 1) {
+                window.location.href = "unit" + (currentUnit - 1) + ".html";
+            } else {
+                alert("This is the first chapter.");
+            }
+        }
+
+        function goHome() {
+            window.location.href = "index.html"; // Aapki main page file ka naam
+        }
+
+        function goNext() {
+            if (currentUnit < 8) {
+                window.location.href = "unit" + (currentUnit + 1) + ".html";
+            } else {
+                alert("This is the last chapter.");
+            }
+        }
+    </script>

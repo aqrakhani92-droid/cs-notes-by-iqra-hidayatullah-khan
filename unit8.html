@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Class 11 - Unit 8 Notes</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <h1>Unit-8: Database Development</h1>
+    <p><em>Complete Exercise Solutions for Chapter 8</em></p>
+
+    <hr>
+
+    <h2>Q1. Select the best choice for the following MCQs.</h2>
+    <ol>
+        <li>Which of the following is used to store data in a database?
+            <br> <strong>(a) Table [Correct]</strong> (b) Form (c) Query (d) Report
+        </li>
+        <br>
+        <li>________ is a window that displays data for viewing, entering and editing information.
+            <br> (a) Table <strong>(b) Form [Correct]</strong> (c) Query (d) Report
+        </li>
+        <br>
+        <li>Which of the following is logical data type?
+            <br> (a) Text (b) Hyperlink (c) Autonumber <strong>(d) Yes/No [Correct]</strong>
+        </li>
+        <br>
+        <li>________ is an open source application program.
+            <br> (a) MS Access <strong>(b) OpenOffice Base [Correct]</strong> (c) SQL Server (d) MS Word
+        </li>
+        <br>
+        <li>What is the maximum size of short text field data type?
+            <br> (a) 253 (b) 254 <strong>(c) 255 [Correct]</strong> (d) 256
+        </li>
+        <br>
+        <li>________ Key is a unique key field in a table.
+            <br> (a) Secondary (b) Foreign (c) Composite <strong>(d) Primary [Correct]</strong>
+        </li>
+        <br>
+        <li>Which key is used to create One-to-Many relationship between tables?
+            <br> (a) Secondary <strong>(b) Foreign [Correct]</strong> (c) Composite (d) Primary
+        </li>
+        <br>
+        <li>________ is used to display data in an organized manner, so that users can print it.
+            <br> (a) Table (b) Form (c) Query <strong>(d) Report [Correct]</strong>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>Q2. Give short answers to the following questions.</h2>
+
+    <p><strong>i. Name different types of database management systems.</strong><br>
+    There are several types of Database Management Systems (DBMS) based on how they organize data. The most common ones include Relational DBMS (RDBMS) like MS Access and MySQL, Hierarchical DBMS, Network DBMS, and Object-Oriented DBMS. Each type has a unique way of storing and retrieving data depending on the complexity and requirements of the organization.</p>
+
+    <p><strong>ii. What is OpenOffice Base?</strong><br>
+    OpenOffice Base is a fully featured desktop database management system designed to meet the needs of a broad array of users. It is an open-source application, meaning it is free to use and modify. It allows users to create tables, queries, forms, and reports, and can act as a front-end for various database engines like MySQL or Adabas D.</p>
+
+    <p><strong>iii. How forms are useful in database?</strong><br>
+    Forms provide a user-friendly interface for interacting with the database. They are useful because they allow users to enter, edit, and view data without needing to look at the complex table structures. Forms can include buttons, text boxes, and labels that guide the user, making data entry more accurate and reducing the chance of technical errors.</p>
+
+    <p><strong>iv. Name common Access database objects.</strong><br>
+    Microsoft Access relies on several core objects to function. The four most common objects are: 1) Tables (to store data), 2) Queries (to search and retrieve specific data), 3) Forms (to provide a user interface for data entry), and 4) Reports (to format and summarize data for printing or presentation).</p>
+
+    <p><strong>v. How primary key is assigned in a table?</strong><br>
+    In MS Access, a primary key can be assigned by selecting a field in "Design View" and clicking the "Primary Key" button on the Ribbon. This ensures that every record in that table is unique. Alternatively, Access often prompts the user to create a primary key automatically if they save a table without one, usually creating an "ID" field with the Autonumber data type.</p>
+
+    <p><strong>vi. What is a report?</strong><br>
+    A report is a database object used to present information from tables or queries in a structured and professional format. Unlike forms or tables, reports are specifically designed for output, such as printing or converting to PDF. They can group data, calculate totals or averages, and use visual elements like headers and footers to make information easy to read.</p>
+
+    <p><strong>vii. How relationship can be edited in Access?</strong><br>
+    Relationships can be edited by going to the "Database Tools" tab and clicking on "Relationships." This opens a window showing all connected tables. By double-clicking the line connecting two tables, the "Edit Relationships" dialog box appears. Here, users can change the relationship type or enable features like "Enforce Referential Integrity" and "Cascade Update/Delete."</p>
+
+    <p><strong>viii. Name different navigation buttons in a form.</strong><br>
+    Navigation buttons are located at the bottom of a form window and allow users to move through records. The common buttons include: 1) First Record, 2) Previous Record, 3) Current Record (showing the record number), 4) Next Record, 5) Last Record, and 6) New (Blank) Record button used for adding a new entry to the database.</p>
+
+    <hr>
+
+    <h2>Q3. Give detailed answers to the following questions.</h2>
+
+    <p><strong>i. Explain the following database objects: (a) Tables (b) Forms (c) Queries (d) Reports.</strong><br>
+    <strong>Tables:</strong> These are the foundation of any database. They store data in rows (records) and columns (fields). Each table represents a specific subject, such as "Students" or "Orders."<br>
+    <strong>Forms:</strong> Forms act as the interface between the user and the data. They allow for easy data entry and viewing, often including navigation controls and data validation features.<br>
+    <strong>Queries:</strong> Queries are used to ask questions of the database. They can filter records based on specific criteria, join data from multiple tables, and even perform calculations.<br>
+    <strong>Reports:</strong> Reports are designed for output. They organize and summarize data in a professional layout suitable for printing, often including headers, footers, and calculated fields like "Total Sales."</p>
+
+    <p><strong>ii. Explain different data types used in Access.</strong><br>
+    MS Access provides various data types to ensure data accuracy: <br>
+    1. <strong>Short Text:</strong> Stores up to 255 alphanumeric characters (names, addresses).<br>
+    2. <strong>Long Text:</strong> Used for large amounts of text (sentences or paragraphs).<br>
+    3. <strong>Number:</strong> Stores numeric data for mathematical calculations.<br>
+    4. <strong>Date/Time:</strong> Specifically for calendar dates and clock times.<br>
+    5. <strong>Currency:</strong> Used for monetary values to prevent rounding errors.<br>
+    6. <strong>AutoNumber:</strong> Automatically generates a unique number for every new record.<br>
+    7. <strong>Yes/No:</strong> A logical data type for "True/False" or "On/Off" values.</p>
+    
+
+    <p><strong>iii. Describe two methods of creating a table in Access.</strong><br>
+    1. <strong>Datasheet View:</strong> This is the simplest method where you enter data directly into a spreadsheet-like grid. Access automatically assigns data types based on the values you type. It is best for quick and simple tables.<br>
+    2. <strong>Design View:</strong> This method gives the user complete control. You manually define field names, choose specific data types, and set field properties (like field size or validation rules). This is the preferred method for professional database development as it ensures the structure is optimized before data is added.</p>
+
+    <p><strong>iv. Explain the process of creating forms in Access.</strong><br>
+    Forms can be created using several tools. The <strong>Form Tool</strong> creates a basic form automatically from a selected table. The <strong>Form Wizard</strong> provides a step-by-step process where you select specific fields, choose a layout (like Columnar or Tabular), and pick a style. For advanced users, <strong>Form Design</strong> allows you to build a form from scratch, placing text boxes, buttons, and images exactly where you want them. Once created, forms can be used in "Form View" for data entry or "Layout View" for visual adjustments.</p>
+
+    <p><strong>v. Write the steps for creating relationships between tables.</strong><br>
+    To create a relationship: 1) Open the "Database Tools" tab and click "Relationships." 2) Add the tables you want to link using the "Show Table" dialog. 3) Drag the primary key field from one table and drop it onto the matching foreign key field in the other table. 4) In the "Edit Relationships" window, check "Enforce Referential Integrity" if needed. 5) Click "Create." A line will appear between the tables indicating that the link is established.</p>
+    
+
+    <p><strong>vi. Explain different types of queries used in Access.</strong><br>
+    1. <strong>Select Query:</strong> The most common type, used to retrieve specific data from one or more tables.<br>
+    2. <strong>Action Query:</strong> Used to change or move data (e.g., Update Query, Delete Query, or Append Query).<br>
+    3. <strong>Parameter Query:</strong> A query that asks the user for input (like a date range) before it runs.<br>
+    4. <strong>Crosstab Query:</strong> Used to calculate and restructure data for easier analysis, similar to a pivot table in Excel.</p>
+
+    <p><strong>vii. How can One-to-Many relationship be created between two tables? Give example.</strong><br>
+    A One-to-Many relationship exists when a record in Table A can match many records in Table B, but a record in Table B matches only one in Table A. It is created by placing the Primary Key of the "One" side into the "Many" side as a Foreign Key. <strong>Example:</strong> A "Customer" table and an "Orders" table. One customer can place many orders, but each order belongs to only one specific customer. The "CustomerID" in the Orders table acts as the link.</p>
+
+    <p><strong>viii. What is a Report? How report is created using wizard option in Access 2016?</strong><br>
+    A report is a formatted summary of data for printing. To use the <strong>Report Wizard</strong>: 1) Go to the "Create" tab and click "Report Wizard." 2) Select the table or query and the specific fields you want to include. 3) Choose grouping levels (e.g., group by city). 4) Select a sorting order (e.g., by name). 5) Pick a layout (Stepped, Block, or Outline). 6) Give the report a title and click "Finish." Access will then generate the report for you to review.</p>
+
+</body>
+</html>
+
+
+
+<hr>
+    <div style="text-align: center; margin: 40px 0; display: flex; justify-content: center; gap: 15px;">
+        
+        <button onclick="goBack()" style="background-color: #808080; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            &laquo; Previous Chapter
+        </button>
+
+        <button onclick="goHome()" style="background-color: #000000; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            Home Page
+        </button>
+
+        <button onclick="goNext()" style="background-color: #0047ab; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            <reviews class="html"></reviews> &raquo;
+        </button>
+
+    </div>
+
+    <script>
+    // Unit 8 ki file mein ye lazmi 8 hona chahiye
+    const currentUnit = 8; 
+
+    function goNext() {
+        if (currentUnit < 8) {
+            window.location.href = "unit" + (currentUnit + 1) + ".html";
+        } 
+        else {
+            // Jab currentUnit 8 hogi, tabhi ye line chalegi
+            window.location.href = "reviews.html";
+        }
+    }
+    // Baaki functions (goBack, goHome) waise hi rahen ge
+</script>

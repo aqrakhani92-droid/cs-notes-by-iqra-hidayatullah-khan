@@ -1,0 +1,265 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 3 - Central Processing Unit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Unit 3: Central Processing Unit</h1>
+        <p>Detailed Solutions for Exercise Questions</p>
+        <a href="index.html">Back to Main Menu</a>
+    </header>
+
+    <main>
+        <section class="mcq-section">
+            <h2>Q1. Select the best choice for the following MCQs.</h2>
+            <div class="mcq-list">
+                <p>i. Which of the following performs the arithmetic and logic operations on data?<br>
+                <span class="correct-ans">(a) ALU</span> (b) Control unit (c) Bus (d) Memory unit</p>
+
+                <p>ii. ________ coordinates and controls the computer system.<br>
+                (a) Bus <span class="correct-ans">(b) Control unit</span> (c) Output unit (d) Register</p>
+
+                <p>iii. Where are the logical operations performed in the CPU?<br>
+                (a) CU (b) Register <span class="correct-ans">(c) ALU</span> (d) Memory</p>
+
+                <p>iv. ________ is a small memory location available in the CPU to store data temporarily.<br>
+                (a) CU <span class="correct-ans">(b) Register</span> (c) ALU (d) Memory</p>
+
+                <p>v. ________ is the small amount of memory located between main memory and Processor.<br>
+                (a) RAM (b) ROM <span class="correct-ans">(c) Cache</span> (d) PROM</p>
+
+                <p>vi. Which of the following cache memories resides inside the microprocessor and is very fast?<br>
+                <span class="correct-ans">(a) L1 cache</span> (b) L2 cache (c) L3 cache (d) L4 cache</p>
+
+                <p>vii. ________ Register is used in arithmetics and data movement and has special addressing abilities.<br>
+                <span class="correct-ans">(a) Base register</span> (b) Memory buffer register (c) Data register (d) Counter register</p>
+
+                <p>viii. Which of the following register has a special role in multiply and divide operations?<br>
+                (a) Base register (b) Memory buffer register <span class="correct-ans">(c) Data register</span> (d) Counter register</p>
+
+                <p>ix. ________ register holds either the address of the instruction being executed or the next instruction.<br>
+                <span class="correct-ans">(a) Program counter</span> (b) Memory buffer register (c) Data register (d) Counter register</p>
+
+                <p>x. System bus connects the Central Processing Unit to ________ on the motherboard.<br>
+                (a) Register <span class="correct-ans">(b) Main memory</span> (c) ALU (d) Storage</p>
+
+                <p>xi. Which of the following steps, in instruction cycle, interprets the instruction?<br>
+                (a) Fetch <span class="correct-ans">(b) Decode</span> (c) Execute (d) Write-back</p>
+
+                <p>xii. ________ instruction is used when number of statements is to be repeated.<br>
+                (a) LD <span class="correct-ans">(b) LOOP</span> (c) JMP (d) MOV</p>
+
+                <p>xiii. ________ is a microprocessor architecture designed to perform a smaller set of instructions.<br>
+                <span class="correct-ans">(a) RISC</span> (b) CISC (c) DISK (d) LIST</p>
+
+                <p>xiv. How many Op-Codes does a Zero-Address instruction have?<br>
+                <span class="correct-ans">(a) 1</span> (b) 2 (c) 3 (d) 0</p>
+
+                <p>xv. Which of the following is not an arithmetic instruction?<br>
+                (a) DIV (b) MUL (c) SUB <span class="correct-ans">(d) JMP</span></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="short-questions">
+            <h2>Q2. Give short answers to the following questions.</h2>
+            
+            <div class="qa-item">
+                <p><strong>i. What is the function of ALU in the computer?</strong><br>
+                The Arithmetic and Logic Unit (ALU) is the core component of the CPU where actual data processing takes place. Its primary function is to perform all mathematical calculations such as addition, subtraction, multiplication, and division. Additionally, it handles logical operations, which involve comparing two data items to determine if one is greater than, less than, or equal to the other. Every instruction executed by the computer that involves calculation or decision-making is processed through the ALU.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>ii. What is the function of control unit in the computer?</strong><br>
+                The Control Unit (CU) acts as the supervisor or manager of the entire computer system. It does not process data itself but coordinates the flow of information between the CPU, memory, and I/O devices. It fetches instructions from the main memory, decodes them to understand the required action, and then issues control signals to other components (like the ALU or Registers) to execute the command. It ensures that operations are performed in the correct order and at the right time.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>iii. What is a microprocessor?</strong><br>
+                A microprocessor is a single integrated circuit (IC) or silicon chip that contains all the functions of a Central Processing Unit (CPU). It is the "brain" of modern computers, consisting of millions of transistors that handle data processing and control tasks. It is responsible for executing program instructions and managing the hardware components. Microprocessors are used in a wide range of devices, including PCs, laptops, smartphones, and embedded systems, and their power is usually measured by clock speed and core count.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>iv. Define system bus.</strong><br>
+                A system bus is a high-speed communication pathway on the motherboard that connects the CPU to other major components like RAM and input/output controllers. It consists of a set of parallel wires or tracks that transmit electrical signals representing data, memory addresses, and control commands. The system bus is typically divided into three specialized buses: the Data Bus for moving data, the Address Bus for identifying memory locations, and the Control Bus for transmitting timing and coordination signals between components.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>v. Write short note on Memory Buffer Register (MBR).</strong><br>
+                The Memory Buffer Register (MBR), also known as the Memory Data Register (MDR), is a specialized high-speed storage location within the CPU. Its role is to temporarily hold the actual data or instruction that is either being fetched from the main memory (RAM) or is being sent from the CPU to be stored in the memory. It acts as a buffer that allows the processor to work efficiently while the data transfer between the fast CPU and the relatively slower main memory is being completed.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>vi. What is CPU operation?</strong><br>
+                CPU operation refers to the fundamental process by which the processor executes a single instruction, often called the Machine Cycle. This operation consists of four repetitive stages: Fetch (getting the instruction from memory), Decode (translating the instruction into signals), Execute (performing the actual task in the ALU or other units), and Write-back (storing the result). The CPU performs these operations billions of times per second, allowing it to run software, process user input, and manage system resources simultaneously.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>vii. What is meant by an instruction?</strong><br>
+                In computer science, an instruction is a basic command or order given to the processor to perform a specific task. These tasks can include moving data, performing a calculation, or jumping to a different part of a program. Instructions are written in a language the hardware understands (machine code). A complete set of these instructions forms a computer program. Each instruction usually contains an operation code (Op-code) and one or more memory addresses or data values known as operands.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>viii. Differentiate between op-code and operand?</strong><br>
+                An <strong>Op-code</strong> (Operation Code) is the part of a machine language instruction that specifies the operation to be performed, such as ADD, SUB, or MOV. It essentially tells the CPU "what to do." An <strong>Operand</strong> is the data or the memory address upon which the operation is performed. It tells the CPU "what to do it with." For example, in the command `ADD 5, 10`, `ADD` is the Op-code, while `5` and `10` are the operands. Every instruction must have an Op-code, but the number of operands can vary.</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>ix. Show computer instruction format with the help of a diagram and label its parts.</strong><br>
+                The standard format for a computer instruction is divided into two primary fields:
+                
+                1. <strong>Op-code Field:</strong> This field contains the code for the operation to be performed (like binary for ADD).
+                2. <strong>Address/Operand Field:</strong> This field contains the data or the memory location of the data to be used in the operation.
+                (In a 16-bit instruction, for instance, the first 4 bits might be the Op-code and the remaining 12 bits represent the Operand address).</p>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>x. Differentiate between CISC and RISC processor architecture.</strong><br>
+                CISC (Complex Instruction Set Computing) is an architecture where the processor can execute complex instructions that may take multiple clock cycles (e.g., Intel x86). It focuses on hardware complexity to reduce program code size. RISC (Reduced Instruction Set Computing) uses a small, highly optimized set of simple instructions that mostly execute in a single clock cycle (e.g., ARM). RISC focuses on software/compiler efficiency and is generally faster and more power-efficient, making it ideal for mobile devices.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="long-questions">
+            <h2>Q3. Give detailed answers to the following questions.</h2>
+
+            <div class="long-qa-item">
+                <h3>i. What is CPU? Describe basic components of CPU in detail.</h3>
+                <p>The Central Processing Unit (CPU) is often referred to as the "brain" of the computer. It is responsible for interpreting and executing instructions from the hardware and software.</p>
+                
+                
+
+                <h4>1. Arithmetic and Logic Unit (ALU)</h4>
+                <p>The ALU is the calculating part of the CPU. It handles all mathematical operations (Addition, Subtraction) and logical operations (Comparing values). It is the actual "processor" inside the CPU.</p>
+
+                <h4>2. Control Unit (CU)</h4>
+                <p>The Control Unit does not process data; instead, it directs the flow of data. It fetches instructions from memory, decodes them, and manages the execution by sending signals to other parts of the system.</p>
+
+                <h4>3. Registers</h4>
+                <p>Registers are tiny, high-speed storage locations within the CPU chip. They hold data, instructions, and addresses that are needed immediately by the processor. They are the fastest memory in the entire system.</p>
+
+                <h4>4. Internal CPU Bus</h4>
+                <p>This is the communication path that connects the ALU, CU, and registers together, allowing them to exchange data at extremely high speeds during the instruction cycle.</p>
+            </div>
+
+            <div class="long-qa-item">
+                <h3>ii. What is a register? Explain different types of registers.</h3>
+                <p>Registers are very small, extremely fast memory cells located directly inside the CPU. They are used to store data and instructions temporarily for immediate processing.</p>
+
+                <h4>1. General Purpose Registers</h4>
+                <p>These are used for general data movement and arithmetic. Common examples include AX (Accumulator), BX (Base), CX (Counter), and DX (Data) registers.</p>
+
+                <h4>2. Special Purpose Registers</h4>
+                <ul>
+                    <li><strong>Program Counter (PC):</strong> Holds the address of the next instruction to be fetched from memory.</li>
+                    <li><strong>Memory Address Register (MAR):</strong> Holds the address of the memory location that the CPU is currently accessing.</li>
+                    <li><strong>Memory Buffer Register (MBR):</strong> Holds the actual data being read from or written to memory.</li>
+                    <li><strong>Instruction Register (IR):</strong> Holds the current instruction while it is being decoded and executed.</li>
+                </ul>
+            </div>
+
+            <div class="long-qa-item">
+                <h3>iii. What is a system bus? Explain different types of buses used in computers.</h3>
+                <p>A system bus is a set of parallel electrical paths (wires) on the motherboard that allow the CPU to communicate with other parts of the computer.</p>
+
+                
+
+                <h4>1. Data Bus</h4>
+                <p>The Data Bus carries the actual data (bits) between the CPU, memory, and input/output devices. It is bi-directional, meaning data can move in both directions.</p>
+
+                <h4>2. Address Bus</h4>
+                <p>The Address Bus carries the memory address of the location where data is stored or needs to be sent. It is uni-directional, as the CPU always generates the addresses.</p>
+
+                <h4>3. Control Bus</h4>
+                <p>The Control Bus carries control and timing signals to coordinate all activities. Signals like "Read," "Write," and "Interrupt" travel through this bus to keep the system synchronized.</p>
+            </div>
+
+            <div class="long-qa-item">
+                <h3>iv. Explain different types of CPU instructions. Also give examples.</h3>
+                <p>CPU instructions are commands that tell the processor what to do. They are broadly classified into four categories:</p>
+
+                <h4>1. Data Transfer Instructions</h4>
+                <p>These instructions move data between registers or between memory and registers. <strong>Example:</strong> `MOV` (Move), `PUSH`, `POP`.</p>
+
+                <h4>2. Arithmetic and Logic Instructions</h4>
+                <p>These perform math or logical comparisons. <strong>Example:</strong> `ADD`, `SUB` (Subtract), `AND`, `OR`, `NOT`.</p>
+
+                <h4>3. Program Control Instructions</h4>
+                <p>These change the flow of a program, allowing it to skip sections or repeat them. <strong>Example:</strong> `JMP` (Jump), `LOOP`, `CALL`.</p>
+
+                <h4>4. Input/Output (I/O) Instructions</h4>
+                <p>These instructions handle data exchange with external devices like keyboards or printers. <strong>Example:</strong> `IN`, `OUT`.</p>
+            </div>
+
+            <div class="long-qa-item">
+                <h3>v. What is Instruction Cycle? Explain different phases of CPU instruction cycle.</h3>
+                <p>The Instruction Cycle (also known as the Machine Cycle) is the continuous process by which the CPU executes a single instruction from a program.</p>
+
+                
+
+                <h4>1. Fetch Phase</h4>
+                <p>The CPU retrieves the instruction from the RAM using the address stored in the Program Counter. The instruction is then placed in the Instruction Register (IR).</p>
+
+                <h4>2. Decode Phase</h4>
+                <p>The Control Unit breaks down the instruction into binary signals to understand which operation (like ADD or MOVE) needs to be performed.</p>
+
+                <h4>3. Execute Phase</h4>
+                <p>The CPU performs the action. If it's a calculation, the ALU carries it out. If it's a jump, the PC is updated with a new address.</p>
+
+                <h4>4. Write-back Phase</h4>
+                <p>The result of the execution is stored back into a register or main memory so it can be used later by other instructions.</p>
+            </div>
+        </section>
+    </main>
+<hr>
+    <div style="text-align: center; margin: 40px 0; display: flex; justify-content: center; gap: 15px;">
+        
+        <button onclick="goBack()" style="background-color: #808080; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            &laquo; Previous Chapter
+        </button>
+
+        <button onclick="goHome()" style="background-color: #000000; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            Home Page
+        </button>
+
+        <button onclick="goNext()" style="background-color: #0047ab; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">
+            Next Chapter &raquo;
+        </button>
+
+    </div>
+
+    <script>
+        // Change these numbers for each page
+        // For example, if you are on Unit 7:
+        const currentUnit = 3; 
+
+        function goBack() {
+            if (currentUnit > 1) {
+                window.location.href = "unit" + (currentUnit - 1) + ".html";
+            } else {
+                alert("This is the first chapter.");
+            }
+        }
+
+        function goHome() {
+            window.location.href = "index.html"; // Aapki main page file ka naam
+        }
+
+        function goNext() {
+            if (currentUnit < 8) {
+                window.location.href = "unit" + (currentUnit + 1) + ".html";
+            } else {
+                alert("This is the last chapter.");
+            }
+        }
+    </script>
+
+</body>
+</html>

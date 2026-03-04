@@ -1,0 +1,58 @@
+/* --- Master CSS for Laptop & Mobile --- */
+
+/* 1. Basic Settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 2. Header (Laptop aur Mobile dono ke liye adjust hoga) */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+header h1 { margin: 0; font-size: 1.8rem; }
+
+header a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 3. Main Content Box (Ye hai asli jaadu) */
+main {
+    width: 90%;            /* Mobile par side se jagah chorega */
+    max-width: 1000px;     /* Laptop par bohot zyada phelega nahi */
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 4. MCQs aur Text ki Styling */
+h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 8px; }
+
+.correct-ans {
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 5. Mobile Optimization (Media Query) */
+@media (max-width: 600px) {
+    main {
+        width: 95%;        /* Choti screen par box thora aur bara ho jaye */
+        padding: 15px;
+    }
+    header h1 { font-size: 1.4rem; }
+}
