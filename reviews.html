@@ -101,6 +101,21 @@
         function openReview() {
             document.getElementById('splash').style.display = 'none';
             document.getElementById('review-page').style.display = 'block';
+            function submitReview() {
+    const message = document.querySelector('textarea').value;
+    const data = { name: "Iqra Student", rating: "5", message: message };
+
+    fetch(scriptURL, { 
+        method: 'POST', 
+        mode: 'no-cors', // Yeh line zaroori hai
+        body: JSON.stringify(data) 
+    })
+    .then(() => {
+        alert("Shukriya! Aapka review Google Sheet mein chala gaya.");
+        location.reload();
+    })
+    .catch(err => alert("Error: " + err));
+}
        function submitReview() {
     const message = document.querySelector('textarea').value;
     const data = { name: "Student", rating: "5", message: message };
@@ -116,5 +131,6 @@
 </body>
 
 </html>
+
 
 
