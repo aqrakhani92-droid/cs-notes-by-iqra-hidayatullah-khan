@@ -88,10 +88,11 @@
         <h1 style="color: #007bff; font-size: 3rem;">Review Page</h1>
         <p>How were the notes?</p>
         <textarea style="width: 80%; height: 200px; border-radius: 20px; padding: 20px; font-size: 1.2rem;"></textarea><br>
-        <button class="btn-review" style="opacity: 1;" onclick="location.reload()">Submit</button>
+        <button class="btn-review" style="opacity: 1;" onclick="submitReview()">Submit</button>
     </div>
 
     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCwO3AkbDYvx_fjAYsOrbuG8Urh1v8n47-saRnsOKA4irMpYNoZC0YVBY6yO9Ub0_1/exec';
         // Button ko thodi dair baad dikhana
         setTimeout(() => {
             document.getElementById('reviewBtn').style.opacity = '1';
@@ -100,9 +101,20 @@
         function openReview() {
             document.getElementById('splash').style.display = 'none';
             document.getElementById('review-page').style.display = 'block';
+       function submitReview() {
+    const message = document.querySelector('textarea').value;
+    const data = { name: "Student", rating: "5", message: message };
+
+    fetch(scriptURL, { method: 'POST', body: JSON.stringify(data) })
+    .then(() => {
+        alert("Shukriya! Aapka review save ho gaya.");
+        location.reload();
+    });
+}
         }
     </script>
 </body>
 
 </html>
+
 
