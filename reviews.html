@@ -19,7 +19,7 @@
         /* Large 4D Logo Box */
         .logo-container {
             position: relative;
-            width: 450px; height: 450px; /* Big Size */
+            width: 450px; height: 450px;
             background: #222;
             border-radius: 80px;
             display: flex; justify-content: center; align-items: center;
@@ -28,26 +28,19 @@
             margin-bottom: 40px;
         }
 
-        /* SVG Logo Styling */
         svg { width: 80%; height: 80%; overflow: visible; }
-
         .logo-path { fill: none; stroke-width: 8; stroke-linecap: round; opacity: 0; }
-        
-        /* Blue side (Left) and Grey side (Right) */
         .blue-part { stroke: #007bff; filter: drop-shadow(0 0 8px #007bff); }
         .grey-part { stroke: #b0b0b0; filter: drop-shadow(0 0 8px #888); }
 
-        /* Animations */
         @keyframes draw { to { stroke-dashoffset: 0; opacity: 1; } }
         @keyframes slideIn { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-        /* IQRA Text Styling */
         .text-iqra {
             color: white; font-size: 45px; letter-spacing: 25px; font-weight: 300;
             margin-top: 20px; opacity: 0; text-transform: uppercase;
         }
 
-        /* Review Button */
         .btn-review {
             margin-top: 50px; padding: 20px 60px; font-size: 22px;
             background: linear-gradient(135deg, #007bff, #0056b3);
@@ -56,7 +49,6 @@
         }
         .btn-review:hover { transform: scale(1.1); box-shadow: 0 15px 30px rgba(0,123,255,0.4); }
 
-        /* Review Page (Hidden initially) */
         #review-page { display: none; width: 100%; height: 100vh; background: white; text-align: center; padding-top: 100px; }
     </style>
 </head>
@@ -65,35 +57,32 @@
     <div id="splash">
         <div class="logo-container">
             <svg viewBox="0 0 200 200">
-                <!-- Outer Circular 'Q' Piece -->
                 <path class="logo-path blue-part" id="q-circle" d="M100,20 A80,80 0 1,1 100,180 A80,80 0 1,1 100,20 M140,140 L170,170" 
-                    style="stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.5s forwards 0.5s;""")/>>
+                    style="stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.5s forwards 0.5s;"/>
                 
-                <!-- Inner 'R' and 'A' merged shape -->
                 <path class="logo-path grey-part" id="ra-shape" d="M70,140 L100,60 L130,140 M85,100 L125,100 M100,60 L100,45" 
-                    style="stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.5s forwards 1.5s;""")/>>
+                    style="stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.5s forwards 1.5s;"/>
                 
-                <!-- Crown Peak -->
                 <path class="logo-path blue-part" d="M90,45 L100,35 L110,45 L100,40 Z" 
-                    style="fill: #007bff; opacity:0; animation: slideIn 0.5s forwards 2.5s;""")/>>
+                    style="fill: #007bff; opacity:0; animation: slideIn 0.5s forwards 2.5s;"/>
             </svg>
         </div>
 
         <div class="text-iqra" style="animation: slideIn 1s forwards 3s;">IQRA</div>
-        
         <button class="btn-review" id="reviewBtn" onclick="openReview()">Write Review</button>
     </div>
 
     <div id="review-page">
         <h1 style="color: #007bff; font-size: 3rem;">Review Page</h1>
         <p>How were the notes?</p>
-        <textarea style="width: 80%; height: 200px; border-radius: 20px; padding: 20px; font-size: 1.2rem;"></textarea><br>
-        <button class="btn-review" style="opacity: 1;" onclick="submitReview()">Submit</button>
+        <textarea id="userMessage" style="width: 80%; height: 200px; border-radius: 20px; padding: 20px; font-size: 1.2rem;"></textarea><br>
+        <button class="btn-review" style="opacity: 1;" onclick="submitReview()">Submit Review</button>
     </div>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxCwO3AkbDYvx_fjAYsOrbuG8Urh1v8n47-saRnsOKA4irMpYNoZC0YVBY6yO9Ub0_1/exec';
-        // Button ko thodi dair baad dikhana
+
+        // Show button after animation
         setTimeout(() => {
             document.getElementById('reviewBtn').style.opacity = '1';
         }, 4000);
@@ -101,36 +90,29 @@
         function openReview() {
             document.getElementById('splash').style.display = 'none';
             document.getElementById('review-page').style.display = 'block';
-            function submitReview() {
-    const message = document.querySelector('textarea').value;
-    const data = { name: "Iqra Student", rating: "5", message: message };
+        }
 
-    fetch(scriptURL, { 
-        method: 'POST', 
-        mode: 'no-cors', // Yeh line zaroori hai
-        body: JSON.stringify(data) 
-    })
-    .then(() => {
-        alert("Shukriya! Aapka review Google Sheet mein chala gaya.");
-        location.reload();
-    })
-    .catch(err => alert("Error: " + err));
-}
-       function submitReview() {
-    const message = document.querySelector('textarea').value;
-    const data = { name: "Student", rating: "5", message: message };
+        function submitReview() {
+            const message = document.getElementById('userMessage').value;
+            
+            if(!message) {
+                alert("Please write something before submitting.");
+                return;
+            }
 
-    fetch(scriptURL, { method: 'POST', body: JSON.stringify(data) })
-    .then(() => {
-        alert("Shukriya! Aapka review save ho gaya.");
-        location.reload();
-    });
-}
+            const data = { name: "Iqra Student", rating: "5", message: message };
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                mode: 'no-cors', 
+                body: JSON.stringify(data) 
+            })
+            .then(() => {
+                alert("Thank you! Your review has been submitted successfully.");
+                location.reload(); 
+            })
+            .catch(err => alert("Error: " + err));
         }
     </script>
 </body>
-
 </html>
-
-
-
