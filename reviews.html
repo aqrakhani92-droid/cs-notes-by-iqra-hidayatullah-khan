@@ -7,6 +7,26 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #1a1a1a; display: flex; justify-content: center; align-items: center; font-family: 'Montserrat', sans-serif; overflow: hidden; }
+/* Dark Mode Colors */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Button ki styling */
+#dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
 
         /* Full Screen Splash Container */
         #splash {
@@ -54,6 +74,8 @@
     </style>
 </head>
 <body>
+<button id="dark-mode-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
 
     <div id="splash">
         <div class="logo-container">
@@ -118,6 +140,20 @@
             });
         }
     </script>
+<script>
+function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    
+    var btn = document.getElementById("dark-mode-btn");
+    if (element.classList.contains("dark-mode")) {
+        btn.innerHTML = "☀️ Light Mode";
+    } else {
+        btn.innerHTML = "🌙 Dark Mode";
+    }
+}
+</script>
+
 </body>
 </html>
 
